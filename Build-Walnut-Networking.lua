@@ -40,6 +40,8 @@ project "Walnut-Networking"
       defines { "WL_PLATFORM_LINUX" }
       files { "Platform/Linux/**.h", "Platform/Linux/**.cpp" }
       includedirs { "Platform/Linux" }
+      libdirs { "vendor/GameNetworkingSockets/bin/Linux" }
+      links { "GameNetworkingSockets" }
 
   filter { "system:windows", "configurations:Debug" }	
       links
